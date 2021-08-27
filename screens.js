@@ -164,3 +164,30 @@ screens2d.canvas.image = function(x, y, img, width, height) {
 screens2d.canvas.reset = function() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
+//
+
+// setting objects
+screens2d.screen = new Object();
+
+//setting variables
+screens2d.screen.currentScreen;
+screens2d.screen.currentZIndex = 1;
+
+// screen2d.screen
+screens2d.initScreen = function(screen) {
+    document.getElementById(screen).style.zIndex = screens2d.screen.currentZIndex = 1;
+    screens2d.screen.currentZIndex = screens2d.screen.currentZIndex + 1;
+    if(screens2d.screen.currentZIndex = 2) {
+        document.getElementById(screen).style.display = "flex";
+        screens2d.screen.currentScreen = screen;
+    }
+    else {
+        document.getElementById(screens).style.display = "none";
+    }
+}
+
+screens2d.showScreen = function(screen) {
+    document.getElementById(screens2d.screen.currentScreen).style.display = "none";
+    screens2d.screen.currentScreen = screen;
+    document.getElementById(screens).style.display = "flex";
+}
