@@ -182,12 +182,12 @@ screens2d.initScreen = function(screen) {
         screens2d.screen.currentScreen = screen;
     }
     else {
-        document.getElementById(screens).style.display = "none";
+        document.getElementById(screen).style.display = "none";
     }
 }
 
 screens2d.showScreen = function(screen) {
     document.getElementById(screens2d.screen.currentScreen).style.display = "none";
     screens2d.screen.currentScreen = screen;
-    document.getElementById(screens).style.display = "flex";
+    document.getElementById(screen).style.display = "flex";
 }
